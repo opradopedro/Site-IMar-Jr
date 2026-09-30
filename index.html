@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IMar Júnior — Consultoria e Projetos</title>
+  <meta name="description" content="Empresa Júnior do Instituto do Mar da Unifesp, Baixada Santista. Consultoria ESG, Plano de Gestão de Resíduos Sólidos, Educação Ambiental e eventos sustentáveis.">
+  <meta name="theme-color" content="#030b17">
+  <meta property="og:title" content="IMar Júnior — Consultoria e Projetos">
+  <meta property="og:description" content="Soluções sustentáveis feitas por quem estuda o mar. Empresa Júnior do Instituto do Mar — Unifesp.">
+  <meta property="og:image" content="assets/img/equipe.jpg">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- camada de "neve marinha" + cor de profundidade -->
+  <canvas id="snow" aria-hidden="true"></canvas>
+
+  <header class="nav" id="nav">
+    <a href="#topo" class="brand" aria-label="IMar Júnior — início">
+      <img src="assets/img/logo-mark.png" alt="" width="36" height="36">
+      <span class="brand__word">imar<b>junior</b></span>
+    </a>
+    <div class="gauge" aria-hidden="true">
+      <span class="gauge__label">PROF.</span>
+      <span class="gauge__value"><span id="depth">0000</span>m</span>
+      <span class="gauge__track"><span class="gauge__fill" id="depthFill"></span></span>
+      <span class="gauge__zone" id="zone">EPIPELÁGICA</span>
+    </div>
+    <nav class="nav__links" id="menu" aria-label="Principal">
+      <a href="#quem-somos"><i>01</i>Quem somos</a>
+      <a href="#servicos"><i>02</i>Serviços</a>
+      <a href="#metodo"><i>03</i>Método</a>
+      <a href="#ods"><i>04</i>Compromissos</a>
+      <a href="#faca-parte"><i>05</i>Faça parte</a>
+      <a href="#contato" class="nav__cta">Agendar reunião <span aria-hidden="true">↘</span></a>
+    </nav>
+    <button class="nav__toggle" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="topo" data-depth="0">
+      <canvas id="ocean" aria-hidden="true"></canvas>
+      <div class="hero__hud" aria-hidden="true">
+        <span class="hud hud--tl">23°58′S · 46°19′W<br><em>BAIXADA SANTISTA / SP</em></span>
+        <span class="hud hud--tr">UTC−3 <b id="clock">--:--:--</b><br><em>SINAL <i class="blink">●</i> ATIVO</em></span>
+        <span class="hud hud--bl">EST. 2015<br><em>INSTITUTO DO MAR · UNIFESP</em></span>
+        <span class="hud hud--br">ROLAR PARA MERGULHAR<br><em class="hud__arrow">↓</em></span>
+      </div>
+
+      <div class="hero__inner">
+        <p class="eyebrow" data-scramble>// empresa júnior · consultoria e projetos</p>
+        <h1 class="hero__title">
+          <span class="line"><span>Soluções</span></span>
+          <span class="line"><span>sustentáveis</span></span>
+          <span class="line"><span>com a <em>profundidade</em></span></span>
+          <span class="line"><span>do oceano.</span></span>
+        </h1>
+        <div class="hero__foot">
+          <p class="hero__lead">Somos a IMar Júnior, a Empresa Júnior do Instituto do Mar da Unifesp. Ajudamos empresas, escolas, organizações e eventos a adotar práticas sustentáveis, com ciência de verdade e preço de Empresa Júnior.</p>
+          <div class="hero__actions">
+            <a href="#contato" class="btn btn--solid">Solicitar diagnóstico</a>
+            <a href="#servicos" class="btn btn--ghost">Ver serviços</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TICKER ============ -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>Transparência</span><span>Resiliência</span><span>Ética</span><span>Protagonismo</span><span>Inconformismo</span><span>União</span><span>Proatividade</span><span>Mude o mundo fazendo as escolhas certas</span>
+        <span>Transparência</span><span>Resiliência</span><span>Ética</span><span>Protagonismo</span><span>Inconformismo</span><span>União</span><span>Proatividade</span><span>Mude o mundo fazendo as escolhas certas</span>
+      </div>
+    </div>
+
+    <!-- ============ QUEM SOMOS ============ -->
+    <section class="section about" id="quem-somos" data-depth="200">
+      <header class="sec-head">
+        <span class="sec-head__idx">01</span>
+        <p class="sec-head__tag" data-scramble>quem somos</p>
+        <span class="sec-head__depth">−200 m</span>
+      </header>
+
+      <div class="about__grid">
+        <div class="about__text reveal">
+          <h2 class="h2">Estudantes do mar,<br>trabalhando <em>em terra firme.</em></h2>
+          <p>Fundada em 2015, a IMar Júnior é uma Empresa Júnior comprometida com soluções capazes de gerar impacto na sociedade e no meio ambiente. Somos vinculados ao <strong>Instituto do Mar da Universidade Federal de São Paulo (Unifesp)</strong>, no campus Baixada Santista.</p>
+          <p>Nosso propósito: fomentar a interdisciplinaridade, formar e capacitar jovens empreendedores, estimular a inovação e promover a sustentabilidade por meio dos nossos projetos.</p>
+
+          <ul class="courses" aria-label="Cursos que compõem a IMar Júnior">
+            <li><span>BICT</span>Ciência e Tecnologia do Mar</li>
+            <li><span>ENG·AMB</span>Engenharia Ambiental</li>
+            <li><span>ENG·PET</span>Engenharia de Petróleo</li>
+            <li><span>OCEANO</span>Oceanografia</li>
+          </ul>
+        </div>
+
+        <figure class="scan reveal">
+          <img src="assets/img/equipe.jpg" alt="Equipe da IMar Júnior reunida segurando a bandeira da empresa" loading="lazy" width="1400" height="1050">
+          <span class="scan__line" aria-hidden="true"></span>
+          <span class="scan__corner scan__corner--tl" aria-hidden="true"></span>
+          <span class="scan__corner scan__corner--br" aria-hidden="true"></span>
+          <figcaption><b>REG_001</b> · Equipe IMar Jr. · Santos/SP</figcaption>
+        </figure>
+      </div>
+
+      <!-- missão / visão / valores -->
+      <div class="ideals">
+        <article class="ideal reveal">
+          <span class="ideal__k">MISSÃO</span>
+          <p>Criar hoje as soluções sustentáveis e profissionais que vão mover o futuro do mercado, formando pessoas comprometidas com o desenvolvimento da sociedade e do meio ambiente.</p>
+        </article>
+        <article class="ideal reveal">
+          <span class="ideal__k">VISÃO</span>
+          <p>Ser referência na formação de líderes capacitados e na excelência em soluções sustentáveis, consolidando a IMar Jr. como referência em sustentabilidade no litoral paulista.</p>
+        </article>
+        <article class="ideal reveal">
+          <span class="ideal__k">VALORES</span>
+          <ul class="chips">
+            <li>Transparência</li><li>Resiliência</li><li>Ética</li><li>Protagonismo</li><li>Inconformismo</li><li>União</li><li>Proatividade</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ NÚMEROS ============ -->
+    <section class="stats" data-depth="600" aria-label="IMar Júnior em números">
+      <div class="stat reveal"><b data-count="2015" data-plain>0</b><span>ano de fundação</span></div>
+      <div class="stat reveal"><b data-count="10" data-suffix="+">0</b><span>anos de atuação</span></div>
+      <div class="stat reveal"><b data-count="4">0</b><span>cursos do Instituto do Mar</span></div>
+      <div class="stat reveal"><b data-count="7">0</b><span>frentes de serviço</span></div>
+      <div class="stat reveal"><b data-count="4">0</b><span>ODS da Agenda 2030</span></div>
+    </section>
+
+    <!-- ============ SERVIÇOS ============ -->
+    <section class="section services" id="servicos" data-depth="1000">
+      <header class="sec-head">
+        <span class="sec-head__idx">02</span>
+        <p class="sec-head__tag" data-scramble>nossos serviços</p>
+        <span class="sec-head__depth">−1.000 m</span>
+      </header>
+
+      <div class="services__intro reveal">
+        <h2 class="h2">Soluções ambientais para o seu <em>empreendimento</em> ou <em>evento.</em></h2>
+        <p>Empresas, escolas, organizações e eventos: ajudamos cada um a adotar práticas sustentáveis e contribuir para um futuro mais verde.</p>
+      </div>
+
+      <div class="sv" id="sv">
+        <div class="sv__list" role="tablist" aria-label="Serviços">
+          <button class="sv__item is-active" role="tab" aria-selected="true" aria-controls="sv-panel" data-sv="0">
+            <span class="sv__code">SRV·01</span><span class="sv__name">Consultoria ESG</span><span class="sv__arrow" aria-hidden="true">→</span>
+          </button>
+          <button class="sv__item" role="tab" aria-selected="false" aria-controls="sv-panel" data-sv="1">
+            <span class="sv__code">SRV·02</span><span class="sv__name">Educação Ambiental</span><span class="sv__arrow" aria-hidden="true">→</span>
+          </button>
+          <button class="sv__item" role="tab" aria-selected="false" aria-controls="sv-panel" data-sv="2">
+            <span class="sv__code">SRV·03</span><span class="sv__name">PGRS · Resíduos Sólidos</span><span class="sv__arrow" aria-hidden="true">→</span>
+          </button>
+          <button class="sv__item" role="tab" aria-selected="false" aria-controls="sv-panel" data-sv="3">
+            <span class="sv__code">SRV·04</span><span class="sv__name">Coffee Break Sustentável</span><span class="sv__arrow" aria-hidden="true">→</span>
+          </button>
+          <button class="sv__item" role="tab" aria-selected="false" aria-controls="sv-panel" data-sv="4">
+            <span class="sv__code">SRV·05</span><span class="sv__name">Licenciamento Ambiental</span><span class="sv__arrow" aria-hidden="true">→</span>
+          </button>
+          <button class="sv__item" role="tab" aria-selected="false" aria-controls="sv-panel" data-sv="5">
+            <span class="sv__code">SRV·06</span><span class="sv__name">Consultoria em Normas ISO</span><span class="sv__arrow" aria-hidden="true">→</span>
+          </button>
+          <button class="sv__item" role="tab" aria-selected="false" aria-controls="sv-panel" data-sv="6">
+            <span class="sv__code">SRV·07</span><span class="sv__name">Projetos Personalizados</span><span class="sv__arrow" aria-hidden="true">→</span>
+          </button>
+        </div>
+
+        <div class="sv__panel" id="sv-panel" role="tabpanel" aria-live="polite">
+          <div class="sv__viz" aria-hidden="true">
+            <canvas id="sonar"></canvas>
+            <span class="sv__vizlabel" id="svViz">ESG</span>
+          </div>
+          <div class="sv__body">
+            <p class="sv__for" id="svFor">Empresas · Eventos</p>
+            <h3 class="sv__title" id="svTitle">Consultoria ESG</h3>
+            <p class="sv__desc" id="svDesc">Diagnóstico completo para empresas e eventos, analisando processos e desenvolvendo estratégias alinhadas aos pilares Ambiental, Social e de Governança (ESG).</p>
+            <ul class="sv__points" id="svPoints"></ul>
+            <a href="#contato" class="btn btn--line" data-sv-cta>Quero esse serviço</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ POR QUE UMA EJ / MÉTODO ============ -->
+    <section class="section method" id="metodo" data-depth="1800">
+      <header class="sec-head">
+        <span class="sec-head__idx">03</span>
+        <p class="sec-head__tag" data-scramble>como trabalhamos</p>
+        <span class="sec-head__depth">−1.800 m</span>
+      </header>
+
+      <div class="method__grid">
+        <div class="method__why reveal">
+          <h2 class="h2">Por que contratar uma <em>Empresa Júnior?</em></h2>
+          <p>Contratar uma EJ é apoiar o <strong>Movimento Empresa Júnior</strong>, que forma universitários capazes, líderes e comprometidos com o meio através da educação empreendedora.</p>
+          <dl class="why">
+            <div><dt>+ Qualidade</dt><dd>Projetos desenvolvidos por quem estuda o tema a fundo, com a base científica do Instituto do Mar.</dd></div>
+            <div><dt>− Custo</dt><dd>Preço abaixo do mercado, sem abrir mão de rigor técnico.</dd></div>
+            <div><dt>∞ Impacto</dt><dd>Cada projeto forma novos profissionais e gera valor para a Baixada Santista.</dd></div>
+          </dl>
+        </div>
+
+        <ol class="steps">
+          <li class="step reveal"><span class="step__n">01</span><div><h3>Reunião inicial</h3><p>Entendemos o seu negócio, seus desafios e seus objetivos.</p></div></li>
+          <li class="step reveal"><span class="step__n">02</span><div><h3>Diagnóstico</h3><p>Levantamento técnico dos processos, resíduos e pontos de impacto.</p></div></li>
+          <li class="step reveal"><span class="step__n">03</span><div><h3>Proposta sob medida</h3><p>Escopo, prazo e investimento pensados para a sua realidade.</p></div></li>
+          <li class="step reveal"><span class="step__n">04</span><div><h3>Execução e entrega</h3><p>Implementação acompanhada, relatório final e orientação contínua.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ ODS ============ -->
+    <section class="section ods" id="ods" data-depth="3000">
+      <header class="sec-head">
+        <span class="sec-head__idx">04</span>
+        <p class="sec-head__tag" data-scramble>compromissos globais</p>
+        <span class="sec-head__depth">−3.000 m</span>
+      </header>
+
+      <div class="ods__intro reveal">
+        <h2 class="h2">Alinhados à <em>Agenda 2030</em> da ONU.</h2>
+        <p>Cada projeto é desenvolvido com foco na geração de impacto ambiental positivo e na promoção do desenvolvimento sustentável, por meio de consultorias em gestão de resíduos, educação ambiental, sustentabilidade e conservação dos ecossistemas marinhos.</p>
+      </div>
+
+      <div class="ods__grid">
+        <article class="odc reveal" style="--c:#C5192D"><span class="odc__n">04</span><h3>Educação de qualidade</h3><p>Palestras, aulas e dinâmicas de educação ambiental para escolas e empresas.</p></article>
+        <article class="odc reveal" style="--c:#FD9D24"><span class="odc__n">11</span><h3>Cidades e comunidades sustentáveis</h3><p>Gestão de resíduos e projetos com comunidades do litoral paulista.</p></article>
+        <article class="odc reveal" style="--c:#3F7E44"><span class="odc__n">13</span><h3>Ação contra a mudança global do clima</h3><p>Estratégias ESG que reduzem impactos e emissões das operações.</p></article>
+        <article class="odc reveal" style="--c:#0A97D9"><span class="odc__n">14</span><h3>Vida na água</h3><p>Conservação dos ecossistemas marinhos: o que nos trouxe até aqui.</p></article>
+        <article class="odc odc--decade reveal">
+          <span class="odc__n">2021<br>2030</span>
+          <h3>Década da Ciência Oceânica</h3>
+          <p>Em sintonia com a Década das Nações Unidas da Ciência Oceânica para o Desenvolvimento Sustentável (UNESCO / COI).</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ NA PRÁTICA ============ -->
+    <section class="section field" data-depth="3600">
+      <div class="field__grid">
+        <figure class="field__img reveal">
+          <img src="assets/img/evento.jpg" alt="Membros de diversas empresas juniores reunidos em evento do Movimento Empresa Júnior" loading="lazy" width="768" height="576">
+          <figcaption><b>REG_002</b> · Movimento Empresa Júnior</figcaption>
+        </figure>
+        <div class="field__text reveal">
+          <p class="eyebrow" data-scramble>// registro de campo</p>
+          <h2 class="h2">Ilha Diana, <em>Santos.</em></h2>
+          <p>Em parceria com a IO Jr. e o IPT, a IMar Júnior desenvolveu um projeto para reduzir a vulnerabilidade socioambiental e melhorar as condições ambientais da comunidade da Ilha Diana, formada por pescadores artesanais.</p>
+          <p class="muted">É esse tipo de impacto que nos move: ciência aplicada, perto da comunidade e do mar.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAÇA PARTE ============ -->
+    <section class="section join" id="faca-parte" data-depth="4200">
+      <div class="join__card reveal">
+        <img class="join__badge" src="assets/img/mude-o-mundo.png" alt="Selo: Mude o mundo fazendo as escolhas certas" loading="lazy" width="252" height="263">
+        <div>
+          <p class="eyebrow" data-scramble>// processo seletivo</p>
+          <h2 class="h2">É aluno do <em>Instituto do Mar?</em></h2>
+          <p>BICT Mar, Engenharia Ambiental, Engenharia de Petróleo ou Oceanografia: vem viver o Movimento Empresa Júnior com a gente. Acompanhe nosso Instagram para saber quando abre o próximo processo seletivo.</p>
+          <a class="btn btn--solid" href="https://www.instagram.com/imarjr/" target="_blank" rel="noopener">Seguir @imarjr</a>
+        </div>
+        <img class="join__photo" src="assets/img/banner-time.jpg" alt="Integrantes da IMar Júnior segurando a bandeira da empresa" loading="lazy" width="616" height="409">
+      </div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section class="section contact" id="contato" data-depth="4800">
+      <header class="sec-head">
+        <span class="sec-head__idx">05</span>
+        <p class="sec-head__tag" data-scramble>contato</p>
+        <span class="sec-head__depth">−4.800 m</span>
+      </header>
+
+      <div class="contact__grid">
+        <div class="contact__info reveal">
+          <h2 class="h2">Transforme desafios em <em>oportunidades.</em></h2>
+          <p>Conte o que você precisa e agende uma reunião. Será um prazer entender suas necessidades e construir soluções sustentáveis para o seu negócio.</p>
+
+          <ul class="channels">
+            <li><span>E-MAIL</span><a href="mailto:contato@imarjunior.com.br">contato@imarjunior.com.br</a></li>
+            <li><span>WHATSAPP</span><a href="https://wa.me/5511948294434" target="_blank" rel="noopener">(11) 94829-4434</a></li>
+            <li><span>INSTAGRAM</span><a href="https://www.instagram.com/imarjr/" target="_blank" rel="noopener">@imarjr</a></li>
+            <li><span>LINKEDIN</span><a href="https://br.linkedin.com/company/imarjr" target="_blank" rel="noopener">IMar Júnior</a></li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="form" novalidate>
+          <div class="form__head" aria-hidden="true"><span>TRANSMISSÃO</span><span id="formStatus">AGUARDANDO</span></div>
+          <label class="field-in"><span>Nome</span><input name="nome" required autocomplete="name"></label>
+          <label class="field-in"><span>E-mail</span><input name="email" type="email" required autocomplete="email"></label>
+          <label class="field-in"><span>Empresa / organização</span><input name="empresa" autocomplete="organization"></label>
+          <label class="field-in"><span>Serviço de interesse</span>
+            <select name="servico" id="formService">
+              <option>Consultoria ESG</option>
+              <option>Educação Ambiental</option>
+              <option>PGRS · Resíduos Sólidos</option>
+              <option>Coffee Break Sustentável</option>
+              <option>Licenciamento Ambiental</option>
+              <option>Consultoria em Normas ISO</option>
+              <option>Projetos Personalizados</option>
+              <option>Ainda não sei</option>
+            </select>
+          </label>
+          <label class="field-in field-in--full"><span>Mensagem</span><textarea name="mensagem" rows="4" required></textarea></label>
+          <button class="btn btn--solid btn--full" type="submit">Enviar mensagem <span aria-hidden="true">↗</span></button>
+          <p class="form__note">Ao enviar, abrimos seu app de e-mail com a mensagem pronta.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" data-depth="5000">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="assets/img/logo-mark.png" alt="" width="56" height="56" loading="lazy">
+        <p><b>IMar Júnior</b> · Consultoria e Projetos<br>Empresa Júnior do Instituto do Mar · Unifesp Baixada Santista</p>
+      </div>
+      <button class="surface" id="surface">Voltar à superfície <span aria-hidden="true">↑</span></button>
+    </div>
+    <div class="footer__big" aria-hidden="true">imar junior</div>
+    <div class="footer__bottom">
+      <span>© <span id="year">2026</span> IMar Júnior</span>
+      <span>Mude o mundo fazendo as escolhas certas.</span>
+      <span>ZONA ABISSAL · 5.000 m</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
